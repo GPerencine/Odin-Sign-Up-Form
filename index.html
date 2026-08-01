@@ -16,6 +16,10 @@
     <meta name="description" content="Modern sign-up form developed with HTML and CSS, featuring semantic forms, validation states, custom typography, and responsive layout techniques from The Odin Project Intermediate HTML and CSS course.">
     <meta name="author" content="Gabriel Perencine">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,45 +30,45 @@
             <h1>Gabriel Perencine</h1>
         </div>
         <footer class="credit">
-            <p>Photo by <a href="https://unsplash.com/pt-br/fotografias/imac-prata-na-mesa-branca-0fO7J6PGW84" target="_blank">Blvck Paris</a> on Unsplash</p>
+            <p>Photo by <a href="https://unsplash.com/pt-br/fotografias/macbook-pro-na-mesa-de-madeira-preta-PNbDkQ2DDgM" target="_blank">AltumCode</a> on Unsplash</p>
         </footer>
     </aside>
     <main>
         <section class="cta">
             <h2>This is not a real online service!</h2>
-            <p>This is a modern sign-up form built by me, as part of the Intermediate HTML and CSS course from The Odin Project.</p>
+            <p>This is a modern sign-up form built by me as part of The Odin Project's Intermediate HTML and CSS course. But let's pretend it's a real Sign Up Form.</p>
         </section>
         <form action="#" method="POST" class="signup-form">
             <section class="forms">
                 <h3>Sign Up!</h3>
                 <div class="input-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName"/>
+                    <input type="text" id="firstName" name="firstName" required/>
                 </div>
 
                 <div class="input-group">
                     <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName"/>
+                    <input type="text" id="lastName" name="lastName" required/>
                 </div>                        
 
                 <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="name@example.com"/>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required/>
                 </div>
 
                 <div class="input-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999"/>
+                    <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" minlength="11" maxlength="11" required/>
                 </div>
                         
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password"/>
+                    <input type="password" id="password" name="password" minlength="6" required title="min 6 characters"/>
                 </div>
                         
                 <div class="input-group">
                     <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword"/>
+                    <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" required/>
                 </div>
             </section>
             <section class="end">

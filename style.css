@@ -9,17 +9,18 @@
 body{
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 aside{
-    background-image: url("./images/side-image.avif");
+    background-image: url("./images/side-image.jpg");
     background-size: cover;       
     background-position: center;   
     background-repeat: no-repeat;
-    width: 30%;
-
+    min-height: 30%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,18 +30,21 @@ aside{
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 180px;
+    margin-top: 140px;
     padding: 20px 0;
     gap: 10px;
 }
 aside h1{
     color: white;
     font-size: 40px;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
 }
 aside footer{
     color: white;
     text-align: center;
     margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 aside a{
     color: white;
@@ -48,6 +52,7 @@ aside a{
 
 main{
     flex: 1;
+    min-width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,7 +64,7 @@ main{
     justify-content: center;
     align-items: stretch;
     background-color: #F9FAFB;
-    padding: 100px 60px;
+    padding: 80px 60px;
     gap: 25px;
 }
 
@@ -80,9 +85,31 @@ main{
     width: 100%;
 }
 .input-group {
-    width: calc(50% - 20px);
+    width: calc(50% - 20px); 
+    max-width: 300px;
     display: flex;
     flex-direction: column;
+    font-weight: bold;
+    gap: 5px;
+}
+.input-group label{
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.input-group input{
+    padding: 4px;
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+    width: 200px;
+}
+.input-group input:focus{
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+.input-group input[type="password"]:user-invalid{
+    border: 2px solid red;
 }
 
 .end{
@@ -93,14 +120,16 @@ main{
     align-items: flex-start;
     gap: 20px;
     flex: 1;
+    font-size: 20px;
 }
 .end button{
     background-color: #596D48;
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-weight: bold;
+    font-size: 20px;
 }
 .end span{
     color: #596D48;
