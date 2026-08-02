@@ -24,6 +24,7 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 100%;
 }
 .header{
     display: flex;
@@ -101,7 +102,7 @@ main{
     padding: 4px;
     border: 2px solid #E5E7EB;
     border-radius: 5px;
-    width: 200px;
+    max-width: 200px;
 }
 .input-group input:focus{
     outline: none;
